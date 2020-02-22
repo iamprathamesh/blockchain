@@ -13,6 +13,18 @@ class Block {
         Hash: ${this.hash}
         Data: ${this.data}`;
     }
+
+    static genesis() {
+        return new this(Date.now(), '-----', 'f1rs7-h45h', 'genesis block');
+    }
+
+    static mineBlock(prevBlock, data) {
+        const timestamp = Date.now();
+        const prevHash = prevBlock.hash;
+        const hash = 'test-hash';
+
+        return new this(timestamp, prevHash, hash, data);
+    }
 }
 
 module.exports = Block;
