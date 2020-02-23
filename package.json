@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "dev-test": "nodemon src/dev-test.js"
   },
   "repository": {
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/iamprathamesh/blockchain#readme",
   "devDependencies": {
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0"
   }
 }
